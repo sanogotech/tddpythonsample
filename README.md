@@ -1,4 +1,4 @@
-# Sample  POO and TDD with  Python
+# Simple  POO and TDD with  Python
 
 
 ## Run Script
