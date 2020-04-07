@@ -1,4 +1,9 @@
-# Class Calculator
+"""
+Python is an object oriented programming language: POO
+Almost everything in Python is an object, with its properties and methods.
+A Class is like an object constructor, or a "blueprint" for creating objects.
+To create a class, use the keyword class:
+"""
 class Calculator:
     
     def addition(self,a,b):
@@ -18,7 +23,14 @@ class Calculator:
         return resultcalcul
 
     
-# Input
+"""
+In Python, function is a group of related statements that perform a specific task.
+Functions help break our program into smaller and modular chunks.
+Keyword def marks the start of function header.
+A function name to uniquely identify it.
+Parameters (arguments) through which we pass values to a function. They are optional.
+An optional return statement to return a value from the function.
+"""
 def saisirClavier(message):
         saisie = input(message)
         return saisie
@@ -29,11 +41,15 @@ def afficherResultat(operation,resultat):
 
 def startCalculatorMenu():
     # Init parameters
+    # A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+    menuoperationtuple = ("ADDITION", "SUBTRACTION", "MULTIPLICATION", "DIVISION")
     a = int(input("Enter first number:"))
     b = int(input("Enter second number:"))
     calculator = Calculator()
     choice = 1
     
+   
+    #Python has two primitive loop commands : While and For
     #While
     while choice != 0:
         print("---------------------------")
@@ -50,16 +66,16 @@ def startCalculatorMenu():
         #Test If
         if choice == 1:
             resultat = calculator.addition(a,b)
-            afficherResultat("ADDITION",resultat)
+            afficherResultat(menuoperationtuple[0],resultat)
         elif choice == 2:
             resultat = calculator.subtraction(a,b)
-            afficherResultat("SUBTRACTION",resultat)
+            afficherResultat(menuoperationtuple[1],resultat)
         elif choice == 3:
             resultat = calculator.multiplication(a,b)
-            afficherResultat("MULTIPLICATION",resultat)
+            afficherResultat(menuoperationtuple[2],resultat)
         elif choice == 4:
             resultat = calculator.division(a,b)
-            afficherResultat("DIVISION",resultat)
+            afficherResultat(menuoperationtuple[3],resultat)
         elif choice == 0:
             print(" Quitter le Menu !")
         else:
