@@ -2,4 +2,13 @@
 
 
 ## Run Script
+'''
 python  basicCalculator.py
+'''
+
+#  Test with  pytest
+'''
+pytest  -h
+pytest -s -v
+
+'''
